@@ -1,0 +1,641 @@
+/* Paleta niño: celeste, amarillo y naranja suave */
+
+:root {
+
+  --celeste: #8fd3ff;
+
+  --celeste-fuerte: #4aa8ff;
+
+  --amarillo: #ffd23f;
+
+  --amarillo-hover: #ffc107;
+
+  --naranja: #e0561f;
+
+  --azul-oscuro: #1f3a5f;
+
+  --fondo: #fffaf0;
+
+}
+
+
+
+*, *::before, *::after {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+
+
+body {
+
+  background-color: var(--fondo);
+
+  font-family: 'Fredoka', Arial, Helvetica, sans-serif;
+
+  color: var(--azul-oscuro);
+
+}
+
+
+
+img { max-width: 100%; cursor: pointer; }
+
+
+
+.contenedor {
+
+  width: min(1200px, 92%);
+
+  margin-inline: auto;
+
+}
+
+
+
+/* ---------- Header ---------- */
+
+header {
+
+  background-color: var(--celeste);
+
+  margin-bottom: 20px;
+
+  border-bottom: 4px dashed var(--amarillo);
+
+  border-radius: 0 0 24px 24px;
+
+}
+
+
+
+.barra {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px 20px;
+
+  padding: 15px 0;
+
+}
+
+
+
+header h1 {
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  color: var(--azul-oscuro);
+
+  text-transform: uppercase;
+
+}
+
+
+
+nav {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 10px 14px;
+
+}
+
+
+
+nav a {
+
+  text-decoration: none;
+
+  color: var(--azul-oscuro);
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  padding: 6px 14px;
+
+  border-radius: 999px;
+
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+nav a:hover {
+
+  background-color: var(--amarillo);
+
+}
+
+
+
+/* ---------- Secciones ---------- */
+
+section {
+
+  margin: 30px 0;
+
+  padding: 0 5px;
+
+}
+
+
+
+h2 {
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+
+  padding: 10px 20px;
+
+  margin: 0 0 22px;
+
+  color: var(--azul-oscuro);
+
+  background-color: var(--amarillo);
+
+  border-radius: 999px;
+
+  display: inline-block;
+
+}
+
+
+
+/* ---------- Productos ---------- */
+
+.contenedor-productos {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  gap: 30px;
+
+  margin-bottom: 20px;
+
+}
+
+
+
+.producto {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  background-color: #fff;
+
+  padding: 14px;
+
+  border: 3px solid var(--celeste);
+
+  border-radius: 20px;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+
+
+.producto:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 8px 18px rgba(74, 168, 255, 0.25);
+
+}
+
+
+
+.producto img {
+
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center top;
+
+  margin-bottom: 15px;
+
+  aspect-ratio: 3 / 4;
+
+  border-radius: 14px;
+
+  transition: transform 0.6s ease-out;
+
+}
+
+
+
+.producto img:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+
+.nombre {
+
+  font-size: 17px;
+
+  color: var(--azul-oscuro);
+
+  font-weight: 500;
+
+  margin-bottom: 5px;
+
+}
+
+
+
+.precio {
+
+  font-size: 16px;
+
+  color: var(--naranja);
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.btnComprar {
+
+  margin-top: auto;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background-color: var(--amarillo);
+
+  color: var(--azul-oscuro);
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+
+.btnComprar:hover {
+
+  background-color: var(--amarillo-hover);
+
+  transform: scale(1.05);
+
+}
+
+
+
+/* ---------- Modal ---------- */
+
+dialog {
+
+  margin: auto;
+
+  padding: 25px;
+
+  border: 4px solid var(--celeste);
+
+  border-radius: 20px;
+
+  width: min(420px, 92%);
+
+  background-color: var(--fondo);
+
+  color: var(--azul-oscuro);
+
+}
+
+
+
+dialog::backdrop {
+
+  background: rgba(31, 58, 95, 0.5);
+
+}
+
+
+
+dialog h3 { margin-bottom: 12px; }
+
+
+
+dialog label {
+
+  display: block;
+
+  margin-top: 12px;
+
+  font-size: 14px;
+
+}
+
+
+
+dialog input {
+
+  width: 100%;
+
+  padding: 8px 12px;
+
+  margin-top: 4px;
+
+  border: 2px solid var(--celeste);
+
+  border-radius: 12px;
+
+  font-family: inherit;
+
+}
+
+
+
+.modalAcciones {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 20px;
+
+}
+
+
+
+.modalAcciones button {
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+}
+
+
+
+.modalAcciones button[type="submit"] {
+
+  background-color: var(--amarillo);
+
+  color: var(--azul-oscuro);
+
+}
+
+
+
+.modalAcciones button[type="button"] {
+
+  background-color: #e5e5e5;
+
+  color: var(--azul-oscuro);
+
+}
+
+
+
+/* ---------- Footer ---------- */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 40px;
+
+  color: #fff;
+
+  background-color: var(--azul-oscuro);
+
+  border-top: 4px dashed var(--amarillo);
+
+  border-radius: 24px 24px 0 0;
+
+}
+
+
+
+.pie {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 24px;
+
+  padding: 20px 0;
+
+}
+
+
+
+.logobottom, .enlaces, .contactanos {
+
+  font-size: 80%;
+
+  padding: 1%;
+
+}
+
+
+
+.bbb {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+}
+
+
+
+.bbb img {
+
+  width: 35px;
+
+  height: 35px;
+
+  border-radius: 50%;
+
+}
+
+
+
+.logobottom-text {
+
+  display: flex;
+
+  flex-direction: column;
+
+}
+
+
+
+.logobottom-text h5,
+
+.logobottom-text p,
+
+.logobottom > p {
+
+  margin: 5px;
+
+}
+
+
+
+.extlinks {
+
+  display: flex;
+
+  gap: 10px;
+
+  padding-top: 8px;
+
+}
+
+
+
+.extlinks img {
+
+  width: 30px;
+
+  height: 30px;
+
+}
+
+
+
+.extlinks a { display: flex; }
+
+
+
+.enlaces {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+}
+
+
+
+.enlaces h2 {
+
+  font-size: 16px;
+
+  margin: 0 0 8px;
+
+  padding: 0;
+
+  background: none;
+
+  border-radius: 0;
+
+  color: var(--amarillo);
+
+}
+
+
+
+.enlaces a,
+
+.contactanos a {
+
+  color: #fff;
+
+  text-decoration: none;
+
+}
+
+
+
+.enlaces a:hover { text-decoration: underline; }
+
+
+
+.contactanos h4 { margin-bottom: 8px; color: var(--amarillo); }
+
+
+
+.contactanos h5 { margin: 5px 0; font-weight: normal; }
+
+
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 600px) {
+
+  header h1 { font-size: 22px; }
+
+  .pie { flex-direction: column; }
+
+}

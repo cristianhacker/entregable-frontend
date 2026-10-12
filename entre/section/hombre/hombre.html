@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hombre</title>
+    <link rel="stylesheet" href="hombre.css">
+    <link rel="stylesheet" href="slider.css">
+    <script src="jquery/jquery-3.7.1.js"></script>
+    <script src="jquery/jquery.slides.js"></script>
+    
+     <script>
+         $(function(){
+           $(".slides").slidesjs({
+             width: 400,
+             height: 140,
+             
+             play: {
+                  active: true,
+                     // [boolean] Generate the play and stop buttons.
+                     // You cannot use your own buttons. Sorry.
+                 effect: "fade",
+                     // [string] Can be either "slide" or "fade".
+                 interval: 2000,
+                     // [number] Time spent on each slide in milliseconds.
+                 auto: true,
+                     // [boolean] Start playing the slideshow on load.
+                 swap: true,
+                     // [boolean] show/hide stop and play buttons
+                 pauseOnHover: true,
+                     // [boolean] pause a playing slideshow on hover
+                 restartDelay: 2000
+                     // [number] restart delay on inactive slideshow
+             }
+           });
+         });
+</script>
+
+</head>
+<body>
+    <main>
+        <header>
+            <div>
+                <h1>Colección de Hombres</h1>
+            </div>
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <a href="#" style="color: rgba(0, 245, 49, 1)">Hombres</a>
+                <a href="../mujeres/mujer.html">Mujeres</a>
+                <a href="../kid/kid.html">Niños</a>
+            </nav>
+        </header>
+
+        <div class="slides" style="overflow: hidden;">
+            <img src="pinterest/sale1.jpg" alt="cargando">
+            <img src="pinterest/sale2.jpg" alt="cargando">
+            <img src="pinterest/sale3.jpg" alt="cargando">
+            <img src="images/bannerchino.jpg" alt="cargando">
+            <img src="pinterest/sale4.jpg" alt="">
+            
+            
+        </div>
+        <section>
+            <h2>Polos</h2>
+            <div class="contenedor-productos">
+                <div class="polos">
+                    <img src="images/polobasico5.webp" alt="">
+                    <h3 class="nombre">Polo básico</h3>
+                    <p class="precio">$37.5</p>
+                    <button class="btnComprar"  data-nombre="Polo básico" data-precio="37.5">Comprar Ahora</button>
+                </div>
+                <div class="polos">
+                    <img src="images/polobasico4).webp" alt="">
+                    <h3 class="nombre">Polo básico</h3>
+                    <p class="precio">$37.5</p>
+                    <button class="btnComprar"  data-nombre="Polo básico" data-precio="37.5">Comprar Ahora</button>
+                </div>
+                <div class="polos">
+                    <img src="images/polobasico3webp.webp" alt="">
+                    <h3 class="nombre">Polo básico</h3>
+                    <p class="precio">$37.5</p>
+                    <button class="btnComprar"  data-nombre="Polo básico" data-precio="37.5">Comprar Ahora</button>
+                </div>
+            </div>
+        </section>    
+        
+        <section>
+
+            <h2>Pantalones</h2>
+            <div class="contenedor-productos">
+                <div class="pantalones">
+                    <img src="images/pantalonjeanbaggi.webp" alt="Pantalón Jean Baggi">
+                    <p class="nombre">Pantalón Jean Baggi</p>
+                    <p class="precio">$101.5</p>
+                    <button class="btnComprar" data-nombre="Pantalón Jean Baggi" data-precio="37.5">Comprar Ahora</button>
+                </div>
+                <div class="pantalones">
+                    <img src="images/pantalonjeanclassic.webp" alt="Pantalón Jean Classic">
+                    <p class="nombre">Pantalón Jean</p>
+                    <p class="precio">$89.9</p>
+                    <button class="btnComprar" data-nombre="Pantalón Jean Classic" data-precio="89.9">Comprar Ahora</button>
+                </div>
+                <div class="pantalones">
+                    <img src="images/pantalonbagginegro.webp" alt="Pantalón Baggi Negro">
+                    <p class="nombre">Pantalón Baggi</p>
+                    <p class="precio">$120.2</p>
+                    <button class="btnComprar" data-nombre="Pantalón Baggi Negro" data-precio="120.2">Comprar Ahora</button>
+                </div>
+                </div>
+        
+        </section>
+            <section>
+                <h2>Poleras</h2>
+                
+                <div class="contenedor-productos">
+                    <div class="poleras">
+                        <img src="images/polera1.webp" alt="Polera Urbana">
+                        <p class="nombre">Polera Urbana Chex</p>
+                        <p class="precio">$100</p>
+                        <button  class="btnComprar" data-nombre="Polera Urbana Chex" data-precio="100">Comprar Ahora</button>
+                    </div>
+                    <div class="poleras">
+                        <img src="images/polera3webp.webp" alt="Polera Casual">
+                        <p class="nombre">Polera urbana</p>
+                        <p class="precio">$99.9</p>
+                        <button class="btnComprar" data-nombre="Polera urbana" data-precio="99.9">Comprar Ahora</button>
+                    </div>
+                    <div class="poleras">
+                        <img src="images/polera4.webp" alt="Polera Deportiva">
+                        <p class="nombre">Polera casual</p>
+                        <p class="precio">200</p>
+                        <button class="btnComprar" data-nombre="Polera casual" data-precio="200">Comprar Ahora</button>
+                    </div>
+                </div>
+        </section>
+
+        <dialog id="modalCompra">
+            <form method= POST id="formCompra">
+                <h3>Confirmar Compra</h3>
+                <p>Producto: <strong id="modalNombreProd">--</strong> -$<strong id="modalPrecioProd">--</strong></p>
+
+                <label for="nombre">Nombre Completo: </label>
+                <input type="text" id="nombre" required placeholder="Ej. Carlos Alcantara">
+
+                <label for="correo">Correo electrónico: </label>
+                <input type="email" id="correo" required placeholder="correo@ejemplo.com">
+                
+                <div class="modalAcciones">
+                    <button type="submit">&#9993;Guardar y Confirmar</button>
+                    <button type="button" id="btnCancelar">Cancelar</button>
+                </div>
+            </form>
+
+        </dialog>
+
+        
+    <footer>
+        <div class="grip1">
+            <div class="logo">
+                <img src="pinterest/logo.jpg">
+                <div class="texto">
+                    <h5>OLD SCHOOL</h5>
+                    <p>For The World</p>
+                </div>
+            </div>
+            <p>SOMOS PERU</p>
+            <div class="extlinks">
+                <a href="http://instagram.com" target="_blank">
+                    <img src="svg/icons8-instagram-48.png"></a>
+                <a href="http://youtube.com" target="_blank">
+                    <img src="svg/icons8-youtube-48.png"></a>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="svg/icons8-facebook-48.png"></a>
+            </div>
+        </div>
+        <div class="enlaces">
+            <h3>Enlaces rápidos</h3>
+            <a href="../../index.html">Inicio</a>
+            <a href="#">Hombres</a>
+            <a href="../mujeres/mujer.html">Mujeres</a>
+            <a href="../kid/kid.html">Niños</a>
+            <a href="../../index.html">Regístrate</a>
+        </div>
+        <div class=" contactanos">
+            <h4>Contáctanos!</h4>
+            <h5>&#11147; Lorem Ipsum 123</h5>
+            <h5>&#9742; +1 676 9420</h5>
+            <h5>&#9993; lorem@ipsum.com</h5>
+        </div>
+        
+    </footer>
+    </main>
+    <script src="index.js"></script>
+
+</body>
+</html>

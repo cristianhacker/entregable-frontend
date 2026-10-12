@@ -1,0 +1,63 @@
+/* ------------------------------ */
+/*      Inicio del slider         */
+/* ------------------------------ */
+.slides {
+    background-color:#fff;
+    width: 100%;
+    margin:0;
+    border-radius: 10px;
+}
+/* a.slidesjs-previous {background-image: url("svg/backward.png");}
+a.slidesjs-next {background-image: url("svg/forwards.png");}
+a.slidesjs-stop {background-image: url("svg/stop.png");}
+a.slidesjs-play {background-image: url("svg/play.png");} */
+/* Tamaño de las imágenes del slider */
+.slides img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+    display:block}
+/* Posicionamiento de los botones de navegación */
+a.slidesjs-previous, a.slidesjs-next, a.slidesjs-stop, a.slidesjs-play {
+    background-repeat: no-repeat;
+    
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    text-indent: -9999px; /* Oculta los texto predeterminados */
+    float: left;
+}
+
+
+/* Formato para los botones de paginación  */
+.slidesjs-pagination {
+    float: right;
+    list-style-type: none;
+    margin:  0;
+    padding: 1;
+}
+
+.slidesjs-pagination li {
+    float: left;
+    margin-left: 5px;
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    margin: 5px;
+    float: left;
+    object-fit: contain;
+    overflow:hidden;
+    /* background-image: url("svg/page-clean.png"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    list-style-type: none;
+    text-indent: -9999px;
+}
+
+/* .slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { 
+    background-image: url("svg/page-solid.png"); 
+} */

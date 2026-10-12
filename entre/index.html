@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="papaya.css">
+    <link rel="icon" type="image/png" href="img/test.png">
+    <script>
+        function gotoslide(index){
+            const slides = document.querySelector('.slides');
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function gotoslide2(index){
+            const slides2 = document.querySelector('.slides2');
+            slides2.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function gotoslide3(index){
+            const slides3 = document.querySelector('.slides3');
+            slides3.style.transform = `translateX(-${index * 100}%)`;
+        }
+        function gotoslide4(index){
+            const slides4 = document.querySelector('.slides4');
+            slides4.style.transform = `translateX(-${index * 100}%)`;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="top-head">
+            <div class="logo">
+                <img src="img/test.png">
+                <div>
+                    <h4>Lorem</h4>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#">Inicio</a>
+                <a href="section/hombre/hombre.html">Hombres</a>
+                <a href="section/mujeres/mujer.html">Mujeres</a>
+                <a href="section/kid/kid.html">Niños</a>
+                <a class="register" href="#">Regístrate</a>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slider-container">
+                <div class="slides">
+                    <img src="img/slider/a (1).jpg">
+                    <img src="img/slider/a (2).jpg">
+                    <img src="img/slider/a (3).jpg">
+                </div>
+                <div class="buttonslide">
+                    <button onclick="gotoslide(0)"></button>
+                    <button onclick="gotoslide(1)"></button>
+                    <button onclick="gotoslide(2)"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="aaa">
+            <h3>Catálogo de ropa</h3>
+            <div class="catalogue">
+                <div class="men">
+                    <div class="slider2">
+                        <div class="slides2">
+                            <img src="img/slider/sbottom/c (1).png">
+                            <img src="img/slider/sbottom/c (2).png">
+                            <img src="img/slider/sbottom/c (3).png">
+                        </div>
+                        <div class="buttonslide">
+                            <button onclick="gotoslide2(0)"></button>
+                            <button onclick="gotoslide2(1)"></button>
+                            <button onclick="gotoslide2(2)"></button>
+                        </div>
+                    </div>
+                    <h3>MEN</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptas! Error placeat delectus nihil numquam.</p>
+                </div>
+                <div class="women">
+                    <div class="slider3">
+                        <div class="slides3">
+                            <img src="img/slider/sbottom/a (1).png">
+                            <img src="img/slider/sbottom/a (2).png">
+                            <img src="img/slider/sbottom/a (3).png">
+                        </div>
+                        <div class="buttonslide">
+                            <button onclick="gotoslide3(0)"></button>
+                            <button onclick="gotoslide3(1)"></button>
+                            <button onclick="gotoslide3(2)"></button>
+                        </div>
+                    </div>
+                    <h3>WOMEN</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore ad id eos a. Sunt, error?</p>
+                </div>
+                <div class="kid">
+                    <div class="slider4">
+                        <div class="slides4">
+                            <img src="img/slider/sbottom/b (1).png">
+                            <img src="img/slider/sbottom/b (2).png">
+                            <img src="img/slider/sbottom/b (3).png">
+                        </div>
+                        <div class="buttonslide">
+                            <button onclick="gotoslide4(0)"></button>
+                            <button onclick="gotoslide4(1)"></button>
+                            <button onclick="gotoslide4(2)"></button>
+                        </div>
+                    </div>
+                    <h3>KID</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, esse minus. Quia id quo distinctio.</p>
+                </div>
+            </div>
+        </div>
+        <article>
+            <div class="formtext-top">
+                <h4>Lorem Ipsum</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi nisi architecto error dicta porro inventore expedita soluta at, asperiores nobis saepe beatae voluptatum magnam quis omnis ipsum impedit labore ut. Omnis, facilis. Itaque natus aspernatur rem placeat nostrum fuga repudiandae, excepturi aliquid voluptate eius maxime.</p>
+            </div>
+            <form action="" method="post">
+                <h3>REGISTRATE</h3>
+                <div id="realforum">
+                    <input type="text" id="name" name="name" placeholder="Nombre Completo: ">
+                    <input type="email" id="email" name="email" placeholder="Correo Electronico: " required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña: ">
+                    <button id="sendbutton">Enviar</button>
+                </div>
+            </form>
+        </article>
+    </nav>
+
+    <script>
+        const btnsend = document.querySelector("#sendbutton");
+
+        btnsend.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            // 1. Get the values from the input fields
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // 2. Create a user object
+            const userData = {
+                name: name,
+                email: email,
+                password: password
+            };
+            if (!name || !email || !password){
+                alert("Rellenalo todo.")
+                return
+            }
+            const memorydata = JSON.parse(localStorage.getItem(userData))||[];
+            memorydata.push(userData);
+            localStorage.setItem("userData", JSON.stringify(memorydata));
+            alert('Data successfully saved to localStorage!');
+            reset()
+        });
+    </script>
+    
+    <footer>
+        <div class="logobottom">
+            <div class="bbb">
+                <img src="img/test.png">
+                <div class="logobottom-text">
+                    <h5>Zapapayon</h5>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam officia provident cum inventore consequatur. Quidem suscipit cumque aliquid voluptatibus facere!</p>
+            <div class="extlinks">
+                <a href="http://instagram.com" target="_blank">
+                    <img src="img/logo/ig.png"></a>
+                <a href="http://youtube.com" target="_blank">
+                    <img src="img/logo/yt.png"></a>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="img/logo/fb.png"></a>
+            </div>
+        </div>
+        <div class="enlaces">
+            <h2>Enlaces rápidos</h2>
+            <a href="#">Inicio</a>
+            <a href="section/hombre/hombre.html">Hombres</a>
+            <a href="section/mujeres/mujer.html">Mujeres</a>
+            <a href="section/kid/kid.html">Niños</a>
+            <a href="#">Regístrate</a>
+        </div>
+        <div class="contactanos">
+            <h4>Contáctanos!</h4>
+            <h5>&#11147; Lorem Ipsum 123</h5>
+            <h5>&#9742; +1 676 9420</h5>
+            <h5>&#9993; lorem@ipsum.com</h5>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search items..." onkeyup="">
+        </div>
+    </footer>
+</body>
+</html>

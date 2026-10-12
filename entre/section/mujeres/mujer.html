@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sección Mujer</title>
+    <link rel="stylesheet" href="mujer.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor barra">
+            <h1>Colección de Mujeres</h1>
+            <nav>
+                <a href="../../index.html">Inicio</a>
+                <a href="../hombre/hombre.html">Hombre</a>
+                <a href="../kid/kid.html">Niño</a>
+            </nav>
+        </div>
+    </header>
+    <main class="contenedor">
+        <section>
+            <h2>Tops</h2>
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="images/top1.webp" alt="Top básico">
+                    <p class="nombre">Top Negro</p>
+                    <p class="precio">S/. 55.5</p>
+                    <button class="btnComprar" data-nombre="Top básico" data-precio="55.5">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/croptop.webp" alt="Top básico">
+                    <p class="nombre">Crop Top</p>
+                    <p class="precio">$47.5</p>
+                    <button class="btnComprar" data-nombre="Top básico" data-precio="47.5">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/gymtop.webp" alt="Top básico">
+                    <p class="nombre">Top Gym</p>
+                    <p class="precio">$67.5</p>
+                    <button class="btnComprar" data-nombre="Top básico" data-precio="67.5">Comprar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Pantalones</h2>
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="images/slim.webp" alt="Pantalón Slim">
+                    <p class="nombre">Pantalón Slim</p>
+                    <p class="precio">$101.5</p>
+                    <button class="btnComprar" data-nombre="Pantalón Slim" data-precio="101.5">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/jean.jpg" alt="Pantalón Jean">
+                    <p class="nombre">Pantalón Jean</p>
+                    <p class="precio">$89.9</p>
+                    <button class="btnComprar" data-nombre="Pantalón Jean" data-precio="89.9">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/cargo.webp" alt="Pantalón Skinny">
+                    <p class="nombre">Pantalón Cargo</p>
+                    <p class="precio">$120.2</p>
+                    <button class="btnComprar" data-nombre="Pantalón Skinny" data-precio="120.2">Comprar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Poleras</h2>
+            <div class="contenedor-productos">
+                <div class="producto">
+                    <img src="images/polera.webp" alt="Polera Urbana">
+                    <p class="nombre">Polera Dark</p>
+                    <p class="precio">$100</p>
+                    <button class="btnComprar" data-nombre="Polera Urbana Chex" data-precio="100">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/ets.webp" alt="Polera Coreana">
+                    <p class="nombre">Polera Coreana</p>
+                    <p class="precio">$99.9</p>
+                    <button class="btnComprar" data-nombre="Polera Urbana" data-precio="99.9">Comprar Ahora</button>
+                </div>
+                <div class="producto">
+                    <img src="images/sanrio.webp" alt="Polera casual">
+                    <p class="nombre">Polera Hello Kitty</p>
+                    <p class="precio">$200</p>
+                    <button class="btnComprar" data-nombre="Polera casual" data-precio="200">Comprar Ahora</button>
+                </div>
+            </div>
+        </section>
+
+        <dialog id="modalCompra">
+            <form method="post" id="formCompra">
+                <h3>Confirmar Compra</h3>
+                <p>Producto: <strong id="modalNombreProd">--</strong> - $<strong id="modalPrecioProd">--</strong></p>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Carlos Alcántara">
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="correo@ejemplo.com">
+
+                <div class="modalAcciones">
+                    <button type="submit">&#9993; Guardar y Confirmar</button>
+                    <button type="button" id="btnCancelar">Cancelar</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="contenedor pie">
+            <div class="logobottom">
+                <div class="bbb">
+                    <img src="images/logo.jpg" alt="Logo Old School">
+                    <div class="logobottom-text">
+                        <h5>OLD SCHOOL</h5>
+                        <p>For The World</p>
+                    </div>
+                </div>
+                <p>El mundo es un lugar bello. Por tanto, da lo mejor de ti. ¡HOY!</p>
+                <div class="extlinks">
+                    <a href="http://instagram.com" target="_blank" rel="noopener"><img src="svg/icons8-instagram-48.png" alt="Instagram"></a>
+                    <a href="http://youtube.com" target="_blank" rel="noopener"><img src="svg/icons8-youtube-48.png" alt="YouTube"></a>
+                    <a href="http://facebook.com" target="_blank" rel="noopener"><img src="svg/icons8-facebook-48.png" alt="Facebook"></a>
+                </div>
+            </div>
+            <div class="enlaces">
+                <h2>Enlaces rápidos</h2>
+                <a href="../../index.html">Inicio</a>
+                <a href="../hombre/hombre.html">Hombres</a>
+                <a href="../kid/kid.html">Niños</a>
+                <a href="#">Regístrate</a>
+            </div>
+            <div class="contactanos">
+                <h4>¡Contáctanos!</h4>
+                <h5>&#11147; Lorem Ipsum 123</h5>
+                <h5>&#9742; +1 676 9420</h5>
+                <h5>&#9993; lorem@ipsum.com</h5>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>
