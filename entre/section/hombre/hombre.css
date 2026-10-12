@@ -14,9 +14,7 @@ box-sizing: border-box;
   --beige-claro: #f1f1f2;
   --negro: #111111;
 }
-br{
-  height: 500px;
-}
+
 
 
 main{ width: min(1400px, 92%); margin-inline: auto; }
