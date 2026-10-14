@@ -1,20 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Lógica del Slider automático
-    const slideImages = document.querySelectorAll('.slides img');
-    let currentSlide = 0;
-
-    if (slideImages.length > 0) {
-        setInterval(() => {
-            slideImages[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + 1) % slideImages.length;
-            slideImages[currentSlide].classList.add('active');
-        }, 3000);
-    }
-
-    // 2. Lógica del Modal y Compra (Guardar en LocalStorage)
     const modalCompra = document.querySelector("#modalCompra");
     const btnCancelar = document.querySelector("#btnCancelar");
     const formCompra = document.querySelector("#formCompra");
+
     const btnComprar = document.querySelectorAll(".btnComprar");
 
     const modalNombreProd = document.querySelector("#modalNombreProd");
@@ -23,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let productoSeleccionado = "";
     let precioSeleccionado = 0;
 
-    btnComprar.forEach((boton) => {
-        boton.addEventListener("click", (event) => {
+    btnComprar.forEach(function(boton) {
+        boton.addEventListener("click", function(event) {
             productoSeleccionado = event.target.getAttribute("data-nombre");
             precioSeleccionado = parseFloat(event.target.getAttribute("data-precio"));
 
@@ -38,13 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (btnCancelar) {
-        btnCancelar.addEventListener("click", () => {
+        btnCancelar.addEventListener("click", function() {
             modalCompra.close();
         });
     }
 
     if (formCompra) {
-        formCompra.addEventListener("submit", (event) => {
+        formCompra.addEventListener("submit", function(event) {
             event.preventDefault();
 
             const nuevaOrden = {
@@ -57,12 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
             const comprasPrevias = JSON.parse(localStorage.getItem("compras")) || [];
             comprasPrevias.push(nuevaOrden);
 
-            localStorage.setItem("compras", JSON.stringify(comprasPrevias));
-
-            alert("¡Compra guardada con éxito!");
+            localStorage.setItem(
+                "compras",
+                JSON.stringify(comprasPrevias)
+            );
 
             formCompra.reset();
             modalCompra.close();
+            alert("¡Compra guardada con éxito en el sistema!");
         });
     }
 });
