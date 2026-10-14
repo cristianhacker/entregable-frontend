@@ -3,32 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mujer - OLD School</title>
-    
+    <title>Niños</title>
     <link rel="stylesheet" href="kid.css">
-    <!-- Librería jQuery -->
+    <link rel="stylesheet" href="slider.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slidesjs/3.0/jquery.slides.min.js"></script>
+
+    <script>
+    $(function(){
+        $(".slides").slidesjs({
+            width: 1000,
+            height: 350,
+            navigation: false, // Desactiva los textos Previous/Next/Stop
+            pagination: {
+                active: true,   // Mantiene los puntos de navegación limpios
+                effect: "fade"
+            },
+            play: {
+                active: false,
+                effect: "fade",
+                interval: 2000,
+                auto: true,
+                swap: true,
+                pauseOnHover: true,
+                restartDelay: 2000
+            }
+        });
+    });
+    </script>
+
 </head>
 <body>
     <main>
-        <!-- CABECERA -->
+        <!-- CABECERA TURQUESA -->
         <header>
             <div>
-                <h1>Colección de Mujeres</h1>
+                <h1>COLECCIÓN DE NIÑOS</h1>
             </div>
             <nav>
-                <a href="../../index.html">Inicio</a>
-                <a href="../hombre/hombre.html">Hombre</a>
-                <a href="../mujeres/mujer.html" style="color: rgba(0, 245, 49, 1);">Mujer</a>
-                <a href="#">Niños</a>
+                <a href="../../index.html">INICIO</a>
+                <a href="../hombre/hombre.html">HOMBRES</a>
+                <a href="../mujeres/mujer.html">MUJERES</a>
+                <a href="../kids/kid.html" style="color: #00f531;">NIÑOS</a>
             </nav>
         </header>
 
         <!-- CARRUSEL SLIDER -->
-        <div class="slides">
-            <img class="active" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1000&h=300&fit=crop" alt="Moda Mujer 1">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1000&h=300&fit=crop" alt="Moda Mujer 2">
-            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1000&h=300&fit=crop" alt="Moda Mujer 3">
+        <div class="slides" style="overflow: hidden;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSoq_gXqeEUWSbuCsR3UrnltoqdVcCVadslsDz6_tfqA&s=10" alt="Banner Niños 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDWIfdmBL2xjiYaLDUCcZ-VBDUn3zyGZ6y6SIn_7IP3w&s=10" alt="Banner Niños 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEvPvQ4zdbNLammmw3VJO3e1SOYtUEjD-txkRLePAgEQ&s=10" alt="Banner Niños 3">
         </div>
 
         <!-- SECCIÓN: POLOS -->
@@ -36,22 +60,22 @@
             <h2>POLOS</h2>
             <div class="contenedor-productos">
                 <div class="polos">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500&h=600&fit=crop" alt="Polo Crop Top Básico">
-                    <h3 class="nombre">Polo Crop Top Básico</h3>
-                    <p class="precio">$32.00</p>
-                    <button class="btnComprar" data-nombre="Polo Crop Top Básico" data-precio="32.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0DQJi6HHzeK5I8x3i789HY-Dm9t42Ccxy2a2uKUltiQ&s=10" alt="Polo Gráfico Dino">
+                    <h3 class="nombre">Polo Gráfico Dino</h3>
+                    <p class="precio">$25.00</p>
+                    <button class="btnComprar" data-nombre="Polo Gráfico Dino" data-precio="25.00">COMPRAR AHORA</button>
                 </div>
                 <div class="polos">
-                    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&h=600&fit=crop" alt="Polo Oversize Urban">
-                    <h3 class="nombre">Polo Oversize Urban</h3>
-                    <p class="precio">$35.50</p>
-                    <button class="btnComprar" data-nombre="Polo Oversize Urban" data-precio="35.50">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL2RBbFDvDkI0ejJSJCUJwCUF1IMt9STks0NhuDxCfRA&s=10" alt="Polo Básico Kids">
+                    <h3 class="nombre">Polo Básico Kids</h3>
+                    <p class="precio">$20.00</p>
+                    <button class="btnComprar" data-nombre="Polo Básico Kids" data-precio="20.00">COMPRAR AHORA</button>
                 </div>
                 <div class="polos">
-                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=500&h=600&fit=crop" alt="Polo Algodón Rib">
-                    <h3 class="nombre">Polo Algodón Rib</h3>
-                    <p class="precio">$29.90</p>
-                    <button class="btnComprar" data-nombre="Polo Algodón Rib" data-precio="29.90">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGNqB4vghMW-9D4Oru6nU3ERFOVyX9zBe3KqGvrAZc-Q&s=10" alt="Polo Aventura Sport">
+                    <h3 class="nombre">Polo Aventura Sport</h3>
+                    <p class="precio">$22.50</p>
+                    <button class="btnComprar" data-nombre="Polo Aventura Sport" data-precio="22.50">COMPRAR AHORA</button>
                 </div>
             </div>
         </section>
@@ -61,22 +85,22 @@
             <h2>PANTALONES</h2>
             <div class="contenedor-productos">
                 <div class="pantalones">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&h=600&fit=crop" alt="Jean Wide Leg High Waist">
-                    <p class="nombre">Jean Wide Leg High Waist</p>
-                    <p class="precio">$95.00</p>
-                    <button class="btnComprar" data-nombre="Jean Wide Leg High Waist" data-precio="95.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPiiAtgLCYLKDikSjgJmmtFNV7mgBgGct8sig4bvsXrw&s" alt="Pantalón Jogger Kids">
+                    <p class="nombre">Pantalón Jogger Kids</p>
+                    <p class="precio">$45.00</p>
+                    <button class="btnComprar" data-nombre="Pantalón Jogger Kids" data-precio="45.00">COMPRAR AHORA</button>
                 </div>
                 <div class="pantalones">
-                    <img src="https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?w=500&h=600&fit=crop" alt="Pantalón Jean Mom Fit">
-                    <p class="nombre">Pantalón Jean Mom Fit</p>
-                    <p class="precio">$88.00</p>
-                    <button class="btnComprar" data-nombre="Pantalón Jean Mom Fit" data-precio="88.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZjAcmnb_8frVkRDEOZo9hV_yLqO0WyiEXtB1mv2RBIQ&s=10" alt="Pantalón Buzo verde">
+                    <p class="nombre">Pantalón Buzo verde</p>
+                    <p class="precio">$49.90</p>
+                    <button class="btnComprar" data-nombre="Pantalón Buzo verde" data-precio="49.90">COMPRAR AHORA</button>
                 </div>
                 <div class="pantalones">
-                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=500&h=600&fit=crop" alt="Pantalón Cargo Estilo Urbano">
-                    <p class="nombre">Pantalón Cargo Estilo Urbano</p>
-                    <p class="precio">$110.00</p>
-                    <button class="btnComprar" data-nombre="Pantalón Cargo Estilo Urbano" data-precio="110.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJcxgSlLcPVYZaGCwwaFVn1R4PF40AWaI5C2DfDlwvMg&s" alt="Pantalón cargo azul">
+                    <p class="nombre">Pantalón cargo azul</p>
+                    <p class="precio">$38.00</p>
+                    <button class="btnComprar" data-nombre="Pantalón cargo azul" data-precio="38.00">COMPRAR AHORA</button>
                 </div>
             </div>
         </section>
@@ -86,34 +110,34 @@
             <h2>POLERAS</h2>
             <div class="contenedor-productos">
                 <div class="poleras">
-                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500&h=600&fit=crop" alt="Polera Hoodie Oversize">
-                    <p class="nombre">Polera Hoodie Oversize</p>
-                    <p class="precio">$89.90</p>
-                    <button class="btnComprar" data-nombre="Polera Hoodie Oversize" data-precio="89.90">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCQgxLA3BBFSSm-d9kfAWa6V1jUv_jjTIx6GHYScFQJQ&s=10" alt="Polera Capucha Explorer">
+                    <p class="nombre">Polera Capucha Explorer</p>
+                    <p class="precio">$55.00</p>
+                    <button class="btnComprar" data-nombre="Polera Capucha Explorer" data-precio="55.00">COMPRAR AHORA</button>
                 </div>
                 <div class="poleras">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=600&fit=crop" alt="Polera Crop con Cierre">
-                    <p class="nombre">Polera Crop con Cierre</p>
-                    <p class="precio">$92.00</p>
-                    <button class="btnComprar" data-nombre="Polera Crop con Cierre" data-precio="92.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YtMqYXBsUcJJPVrruz5ua46HVP3V7kArI_oiZ6vryA&s=10" alt="Polera con Cierre Kids">
+                    <p class="nombre">Polera con Cierre Kids</p>
+                    <p class="precio">$58.90</p>
+                    <button class="btnComprar" data-nombre="Polera con Cierre Kids" data-precio="58.90">COMPRAR AHORA</button>
                 </div>
                 <div class="poleras">
-                    <img src="https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=500&h=600&fit=crop" alt="Polera Casual Fleece">
-                    <p class="nombre">Polera Casual Fleece</p>
-                    <p class="precio">$85.00</p>
-                    <button class="btnComprar" data-nombre="Polera Casual Fleece" data-precio="85.00">Comprar Ahora</button>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLfUil9c8dwV1qh_Nf3zhbsW2VmEfAQrfc9f1K-VXIzA&s=10" alt="Polera Estampada Urban">
+                    <p class="nombre">Polera Estampada Urban</p>
+                    <p class="precio">$52.00</p>
+                    <button class="btnComprar" data-nombre="Polera Estampada Urban" data-precio="52.00">COMPRAR AHORA</button>
                 </div>
             </div>
         </section>
 
-        <!-- VENTANA MODAL PARA COMPRAS -->
+        <!-- VENTANA MODAL -->
         <dialog id="modalCompra">
-            <form method="dialog" id="formCompra">
+            <form method="POST" id="formCompra">
                 <h3>Confirmar Compra</h3>
-                <p style="margin-bottom: 10px; font-size: 14px;">Producto: <strong id="modalNombreProd">--</strong> - $<strong id="modalPrecioProd">--</strong></p>
+                <p>Producto: <strong id="modalNombreProd">--</strong> - $<strong id="modalPrecioProd">--</strong></p>
 
                 <label for="nombre">Nombre Completo:</label>
-                <input type="text" id="nombre" required placeholder="Ej. Ana Lucía Pérez">
+                <input type="text" id="nombre" required placeholder="Ej. Carlos Alcantara">
 
                 <label for="correo">Correo electrónico:</label>
                 <input type="email" id="correo" required placeholder="correo@ejemplo.com">
@@ -125,31 +149,40 @@
             </form>
         </dialog>
 
-        <!-- FOOTER -->
+        <!-- PIE DE PÁGINA TURQUESA -->
         <footer>
-            <div class="logobottom">
-                <div class="bbb">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=100&h=100&fit=crop" alt="Logo Old School">
-                    <div class="logobottom-text">
-                        <h5>OLD SCHOOL</h5>
-                        <p>For The World</p>
-                    </div>
+            <div class="grip1">
+            <div class="logo" style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                <!-- Cuadro blanco con el logo del León Old School -->
+                <div style="width: 48px; height: 48px; background-color: #ffffff; display: flex; align-items: center; justify-content: center; border-radius: 4px; overflow: hidden; flex-shrink: 0;">
+                    <img src="../../pinterest/logo.jpg" alt="OLD SCHOOL" style="width: 100%; height: 100%; object-fit: contain;" onerror="this.src='pinterest/logo.jpg'">
                 </div>
-                <p>EL mundo es lugar bello. Por tanto da lo mejor de ti.!HOY!</p>
-                <div class="extlinks">
-                    <a href="http://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-                    <a href="http://youtube.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube"></a>
-                    <a href="http://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook"></a>
+                <div class="texto">
+                    <h5 style="margin: 0; font-size: 15px; color: #ffffff; font-weight: bold;">OLD SCHOOL</h5>
+                    <p style="margin: 0; font-size: 12px; color: #ffffff;">For The World</p>
                 </div>
             </div>
-
-            <div class="enlaces">
-                <h2>Enlaces rápidos</h2>
-                <a href="../../index.html">Inicio</a>
-                <a href="../hombre/hombre.html">Hombres</a>
-                <a href="../mujeres/mujer.html">Mujeres</a>
-                <a href="#">Niños</a>
+            <p style="margin: 6px 0; font-weight: bold; color: #00f531;">SOMOS PERU</p>
+            <div class="extlinks" style="display: flex; flex-direction: column; gap: 8px; margin-top: 6px;">
+                <a href="http://instagram.com" target="_blank">
+                    <img src="../../svg/icons8-instagram-48.png" alt="Instagram" style="width: 28px; height: 28px; border-radius: 50%; display: block;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/174/174855.png'">
+                </a>
+                <a href="http://youtube.com" target="_blank">
+                    <img src="../../svg/icons8-youtube-48.png" alt="YouTube" style="width: 28px; height: 28px; border-radius: 50%; display: block;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/174/174883.png'">
+                </a>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="../../svg/icons8-facebook-48.png" alt="Facebook" style="width: 28px; height: 28px; border-radius: 50%; display: block;" onerror="this.src='https://cdn-icons-png.flaticon.com/512/733/733547.png'">
+                </a>
             </div>
+        </div>
+        <div class="enlaces">
+            <h3>Enlaces rápidos</h3>
+            <a href="../../index.html">Inicio</a>
+            <a href="../hombre/hombre.html">Hombres</a>
+            <a href="../mujeres/mujer.html">Mujeres</a>
+            <a href="../kid/kid.html">Niños</a>
+            <a href="../../index.html">Regístrate</a>
+        </div>
 
             <div class="contactanos">
                 <h4>Contáctanos!</h4>
@@ -161,6 +194,5 @@
     </main>
 
     <script src="kid.js"></script>
-    <link rel="stylesheet" href="kid.css">
 </body>
 </html>
